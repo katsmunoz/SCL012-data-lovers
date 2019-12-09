@@ -1,7 +1,13 @@
-import POKEMON from './data/pokemon/pokemon.js'
+//sort y filter
 
-let pokemonByType = POKEMON.filter(POKEMON => POKEMON.type);
-console.log(pokemonByType);
+//Filtrar por TIPOS
+export let pokemonByType = (POKEMON, types) => {
+  return POKEMON.filter(pokeTypes => pokeTypes.type.includes(types));
+};
 
-let pokemonNames = POKEMON.filter(POKEMON => POKEMON.name);
-console.log(pokemonNames);
+// Ordenar por NOMBRE
+
+export let pokemonByNames = (POKEMON, names) => {
+  return POKEMON.sort(pokeNames => pokeNames.name.includes(names));
+};
+

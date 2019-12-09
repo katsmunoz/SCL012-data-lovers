@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css"/>    
-    <link href="https://fonts.googleapis.com/css?family=Lato|Questrial|Source+Sans+Pro&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
 
-<div id="pokeHeader" class="header" >
-      <a href="#"><img src="https://fontmeme.com/permalink/191204/14f02719d469a2ffd2bef789f2a013fc.png" id="datamonGoStyle" alt="pokemon-go-font" width="450" height="100"></a>
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Questrial|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/FAVICON.ico">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <div id="pokeHeader" class="header">
+    <a href="#"><img src="https://fontmeme.com/permalink/191204/14f02719d469a2ffd2bef789f2a013fc.png"
+        id="datamonGoStyle" alt="pokemon-go-font" width="450" height="100"></a>
   </div>
   <div id="upperBar" class="barraSup">
     <nav class="barraNav">
-      <div class=""></div>
       <button id="pokeHomeBtn" class="pokeHomeStyle">HOME</button>
       <button id="pokeTypesBtn" class="pokeTypesStyle">Tipo</button>
       <button id="pokeWeakBtn" class="pokeWeakStyle">Debilidades</button>
       <button id="pokeAboutBtn" class="pokeAboutStyle">Pokémon Go</button>
       <input id="pokeSearch" class="pokeSearchStyle" type="text" placeholder="Buscar...">
-      </div>
     </nav>
-</div>
+  </div>
 
-<div id="homePage">
-<div id="pokemonImageUp" class="pokeImageDiv">
-  <img id=pokePicFirst class="pokeImageFirstStyle" src="images/allPokemons.jpg" alt="allPokemons" width="900" height="300">
-<button id="elegirPokeBtn" class="pokeElegir">¿Cuál Pokemon vas a elegir?</button>
-</div>
-</div> 
-<img src="" alt="">
+  <div id="homePage">
+    <div id="pokemonImageUp" class="pokeImageDiv">
+      <img id=pokePicFirst class="pokeImageFirstStyle" src="images/allPokemons.jpg" alt="allPokemons" width="900"
+        height="300">
+      <button id="elegirPokeBtn" class="pokeElegir">¿Cuál Pokemon vas a elegir?</button>
+    </div>
+  </div>
 
-<div id="secondPage">
+  <div id="secondPage">
 
-  <label for="categories">Filtrar por:</label>
-            <select name="specie" id="pokeTypes">
-                <option value="water ">Agua</option>
-                <option value="fire">Fuego</option>
-                <option value="plant">Planta</option>
-                <option value="psychic">Psíquico</option>
-                <option value="ground">Tierra</option>
-                <option value="venom">Veneno</option>
-                <option value="flying">Volador</option>
-              </select>
-            <select name="number" id="pokeNumber">
-              <option value="mayorMenor">Mayor a menor</option>
-              <option value="menorMayor">Menor a mayor</option>
-            </select>
-            <select name="names" id="pokeNames">
-              <option value="aToZ">A-Z</option>
-              <option value="zToA">Z-A</option>
-            </select>
-            <label for="searching">Buscar</label><input type="searchBar">
-            <div id="container" ></div>
-          </div>
+    <select id="select1">
+      <option value="" disabled selected>Tipo</option>
+      <option id="pokeWater" value="Water">Agua</option>
+      <option id="pokeBug" value="Bug">Bicho</option>
+      <option id="pokeDragon" value="Dragon">Dragón</option>
+      <option id="pokeElectric" value="Electric">Eléctrico</option>
+      <option id="pokeGhost" value="Ghost">Fantasma</option>
+      <option id="pokeFire" value="Fire">Fuego</option>
+      <option id="pokeIce" value="Ice">Hielo</option>
+      <option id="pokeNormal" value="Normal">Normal</option>
+      <option id="pokeFight" value="Fighting">Pelea</option>
+      <option id="pokeGrass" value="Grass">Planta</option>
+      <option id="pokePsychic" value="Psychic">Psíquicos</option>
+      <option id="pokeRock" value="Rock">Roca</option>
+      <option id="pokeGround" value="Ground">Tierra</option>
+      <option id="pokePoison" value="Poison">Veneno</option>
+      <option id="pokeFly" value="Flying">Volador</option>
+    </select>
+    <button id="filterTypeButton">GO</button>
 
-          <main>
+    <div id="contentOfCards">
+      <div id="container"></div>
+    </div>
+        
+  </div>
 
-          </main>
-</div>
 
-<!--Barra superior-->
+  <!--Barra superior-->
 
-    <script type="module" src="main.js"></script>
-    <script type="module" src="data.js"></script>
-  </body>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="data.js"></script>
+</body>
+
 </html>
