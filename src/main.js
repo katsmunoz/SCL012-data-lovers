@@ -2,11 +2,14 @@ import POKEMON from './data/pokemon/pokemon.js'
 
 // Importar funcion POKEMON BY TYPE de data
 import { pokemonByType } from './data.js';
-  
+
+// Importar funcion POKEMON BY TYPE de data
+import { pokemonByName } from './data.js';
+
 // Variable del div donde se muestran las cartas
 let pokeBase = document.getElementById('contentOfCards');
 
-// Función para crear CARDS por pokemon
+ // Función para crear CARDS por pokemon
 function createCards (data) {
   let pokeCards = document.createElement('button');
   pokeCards.setAttribute('class', 'pokeCardsStyle');
@@ -39,15 +42,31 @@ for (let i = 0; i < POKEMON.length; i++) {
 
 // Filtrar por tipo
 let pokeSelect = document.getElementById('select1');
-//console.log(pokeSelect);
+console.log(pokeSelect);
 pokeSelect.addEventListener('change', filterPokes);
 function filterPokes () {
-    let finalFilter = pokemonByType(POKEMON, pokeSelect.value);
-    document.getElementById('contentOfCards').innerHTML = "";
-    for (let i = 0; i < finalFilter.length; i++) {
+  let finalFilter = pokemonByType(POKEMON, pokeSelect.value);
+  document.getElementById('contentOfCards').innerHTML = "";
+  for (let i = 0; i < finalFilter.length; i++){
     createCards(finalFilter[i]);
-  }
+
+  } 
 };
+
+// Ordenar por nombre
+let pokeSelect2 = document.getElementById('select1');
+console.log(pokeSelect);
+pokeSelect.addEventListener('change', filterPokes);
+function filterPokes () {
+  let finalFilter = pokemonByType(POKEMON, pokeSelect.value);
+  document.getElementById('contentOfCards').innerHTML = "";
+  for (let i = 0; i < finalFilter.length; i++){
+    createCards(finalFilter[i]);
+
+  } 
+};
+
+
 
 
 //Cambiar de HOME PAGE a SECOND PAGE al hacer click en el boton de la imagen 

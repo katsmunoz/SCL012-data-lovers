@@ -7,19 +7,25 @@
 body {
   background-image: url(images/fondoTrama.jpg);
   font-family: 'Lato', sans-serif;
-
 }
   
   #pokeHeader {
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    flex-direction:row;
     width: 1330px;
     height: 110px;
     padding: 10px 16px;
     background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
     mix-blend-mode: normal;
   }
-  
+   
+  #pokeLogo {
+    display:flex;
+    width: 430px;
+    height: 115;
+  }
+
   .content {
     padding: 16px;
   }
@@ -34,74 +40,39 @@ body {
     padding-top: 102px;
   }
 
-  .pokeHomeStyle {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+  #upperBar {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .pokeButtonNav {
     width: 125px;
     height: 47px;
-    left: 0px;
-    top: 274px;
+    border: 0px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     color: #FFFFFF;
     background: #FFCC03;
   }
 
-  .pokeTypesStyle {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    width: 125px;
-    height: 47px;
-    left: 0px;
-    top: 274px;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #FFFFFF;
-    background: #FFCC03;
-  }
-
-  .pokeWeakStyle {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    width: 125px;
-    height: 47px;
-    left: 0px;
-    top: 274px;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #FFFFFF;
-    background: #FFCC03;
-  }
-
-  .pokeAboutStyle {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    width: 125px;
-    height: 47px;
-    left: 0px;
-    top: 274px;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #FFFFFF;
-    background: #FFCC03;
+  .pokeButtonNav:hover {
+    background:   #1E3565;
+    transition: .5s;
+    cursor: pointer;
   }
 
   .pokeSearchStyle {
-    display: flex;
-    float: right;
+    width: 240px;
+    height: 26px;
     padding: 6px;
     background: #FFFFFF;
     border: 2px solid #FFCC03;
     border-radius: 60px;
-    margin-right: 16px;
     font-size: 18px;
-  }
-
-
-  #upperBar {
-    display: flex;
-    justify-content: center;
-
   }
 
   #pokemonImageUp {
@@ -109,26 +80,31 @@ body {
     flex-direction: column;
     margin-top: 30px;
     margin-left: 230px;
+    border: 0px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
 
   .pokeImageFirstStyle {
-    border-style: solid;
-    border-color: rgba(72, 255, 231, 0.609)
-
+    border: 2px solid  rgba(72, 255, 231, 0.609);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
 
   .pokeElegir {     
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  width: 906px;
-  height: 47px;
-  font-family: 'Lato', sans-serif;
-  font-size: 22px;
-  text-align: center;
-  color: #FFFFFF;
-  background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
+    width: 906px;
+    height: 47px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(270.58deg, rgba(141, 253, 123, 0.792) 0.02%, rgba(2, 227, 200, 0.774) 99.99%);
+    border: 0px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+  }
 
-}
 
 #homePage {
   display: block;
@@ -138,64 +114,138 @@ body {
   display: none;
 }
 
-#contentOfCards {
-  display:flex;
-  flex-wrap: wrap; 
-  margin:20px;
-  margin-top: 40px;
-}
+  #contentOfCards {
+    display:flex;
+    flex-wrap: wrap; 
+    margin:20px;
+    margin-top: 40px;
+  }
 
-.pokeCardsStyle {
-  width: 180px;
-  height: 180px;
+  .pokeCardsStyle {
+    width: 180px;
+    height: 180px;
  
-  background: #FFFFFF;
-  border: 2px solid #F49321;
-  border-radius: 30px;
-  margin: 10px; 
-}
+    background: #FFFFFF;
+    border: 3px solid #F49321;
+    border-radius: 30px;
+    margin: 10px; 
+  }
 
-.pokeCardsStyle:hover {
-  background: rgb(243, 200, 151);
+  .pokeCardsStyle:hover {
+    background: rgb(243, 200, 151);
+    transition: .5s;
+
+    -ms-transform: scale(1.06); /* IE 9 */
+    -webkit-transform: scale(1.06); /* Safari 3-8 */
+    transform: scale(1.06); 
+    cursor: pointer;
+  }
+
+  .pokeCardsPic { 
+    width: 100px;
+    height: 100px; 
+  }
+
+  .pokeCardsName {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+ 
+    color: #F49321;
+  }
+
+  .pokeCardsLine {
+    width: 140px;
+    margin: 3px;
+    margin-left: 17px;
+    background: #F49321;
+    border: 1px solid #F49321;
+  }
+
+  .pokeCardsNum {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 13px;
+
+    color: #F49321;
+  } 
+
+
+  select {
+    width: 278px;
+    height: 38px;
+    margin:20px;
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
+    cursor: pointer;
   
-  transition: .5s;
-  -ms-transform: scale(1.06); /* IE 9 */
-  -webkit-transform: scale(1.06); /* Safari 3-8 */
-  transform: scale(1.06); 
-}
+    background: #FFCC03;
+    border: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 
-.pokeCardsPic { 
-  width: 100px;
-  height: 100px; 
-}
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
 
-.pokeCardsName {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
- 
-  color: #F49321;
-}
+    color: #FFFFFF;
+  }
 
-.pokeCardsLine {
-  width: 140px;
-  margin: 3px;
-  margin-left: 17px;
-  background: #F49321;
-  border: 1px solid #F49321;
-}
+  option {
+    width: 221px;
+    margin-top: 100px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  
+    color: #FFFFFF;
+  }
 
- .pokeCardsNum {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 11px;
-  line-height: 13px;
+  #filterTypeButton {
+    width: 40px;
+    height: 38px;
+    margin:20px;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 60px;
+  
+    background: #FFFFFF;
+    border: 4px solid #FFCC03;
+    border-radius: 80px ; 
+  
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
 
-  color: #F49321;
-} 
+    color: #1E3565;
+  }
+  #filterTypeButton:hover {
+    background: rgb(243, 200, 151);
+    transition: .5s;
+
+    -ms-transform: scale(1.06); /* IE 9 */
+    -webkit-transform: scale(1.06); /* Safari 3-8 */
+    transform: scale(1.06); 
+    cursor: pointer;
+  }
+
+  
+
+
+
+
+
+
 
 
 
