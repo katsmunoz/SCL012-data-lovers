@@ -8,16 +8,17 @@ export let pokemonByName = (POKEMON, sortBy, sortOrder) => {
   let compare = POKEMON.sort((a,b) => {
     return a[sortBy].localeCompare(b[sortBy]);
   });
+
 if (sortOrder === 'aToZ') {
-  return compare;  
+  return compare;
 }
 if (sortOrder === 'zToA') {
-  return compare.reverse();  
+  return compare.reverse();
 }
-if (sortOrder === 'menorMayor') {
-  return compare;  
+if (sortOrder === 'menorMayor'){
+  return compare;
 }
 if (sortOrder === 'mayorMenor') {
-  return compare.reverse();  
+  return compare.reverse();
 }
 };

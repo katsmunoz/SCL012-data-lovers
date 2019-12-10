@@ -102,9 +102,12 @@ body {
     border: 0px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+  }
+  .pokeElegir:hover {
+    background:   #1E3565;
+    transition: .5s;
     cursor: pointer;
   }
-
 
 #homePage {
   display: block;
@@ -134,6 +137,7 @@ body {
   .pokeCardsStyle:hover {
     background: rgb(243, 200, 151);
     transition: .5s;
+    
 
     -ms-transform: scale(1.06); /* IE 9 */
     -webkit-transform: scale(1.06); /* Safari 3-8 */
@@ -210,35 +214,8 @@ body {
     color: #FFFFFF;
   }
 
-  #filterTypeButton {
-    width: 40px;
-    height: 38px;
-    margin:20px;
-    margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 60px;
   
-    background: #FFFFFF;
-    border: 4px solid #FFCC03;
-    border-radius: 80px ; 
   
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-
-    color: #1E3565;
-  }
-  #filterTypeButton:hover {
-    background: rgb(243, 200, 151);
-    transition: .5s;
-
-    -ms-transform: scale(1.06); /* IE 9 */
-    -webkit-transform: scale(1.06); /* Safari 3-8 */
-    transform: scale(1.06); 
-    cursor: pointer;
-  }
-
   
 
 
