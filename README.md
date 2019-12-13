@@ -1,469 +1,266 @@
-# Data Lovers
+# Datamon GO
 
-## Índice
+![Logo](src/imagesREADME/LOGORead.png)
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Parte adicional-opcional (extensión)](#6-parte-adicional-opcional-extensión)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+**Datamon Go** es una página web donde usuarios frecuentes de la app [Pokémon Go](https://www.pokemongo.com/en-us/) puedan conocer las características de todos los pokémons de la región de Kanto. Por medio de 3 filtros, pueden conocer a los pokémon por tipo, ordenarlos alfabéticamente y por número.
 
-***
+Enlace deploy de [Datamon Go](https://natigrottes.github.io/SCL012-data-lovers/src/index.html)
 
-## 1. Preámbulo
+![datamonGo](src/imagesREADME/DGFinal.jpg)
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+## Desarrollado para
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
+[Laboratoria](https://www.laboratoria.la/)
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
-para el usuario.
+## Tecnología y lenguaje utilizado
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+- JavaScript (ES6)
+- Vanilla JS
+- HTML
+- CSS
 
-\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+## Historias de Usuario
 
-## 2. Resumen del proyecto
+### 1. Definiendo al usuario
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
+*Nota: Para poder conocer el impacto del juego en términos sociológicos y psicológicos, y así lograr mayor comprensión respecto a los usuarios, nos guiamos por el artículo ["The UX of Pokémon GO : A Case Study"](https://medium.com/@pedro_ux/pok%C3%A9mon-go-a-case-for-ux-and-psychology-8b6377db573a), escrito por el UX Consultant Pedro Almeida, publicado en [Medium](https://medium.com/).*
 
-Como entregable final tendrás una página web que permita a los usuarios
-**visualizar, filtrar, ordenar, etc.**.
 
-Te proponemos una serie de datos de diferentes _temáticas_ para que los
-explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
-información básica sobre los datos y su estructura, y una lista de las
-necesidades de los usuarios que proviene de una investigación (_research_)
-hecha por el equipo de Laboratoria.
+Para contextualizar, la app Pokémon Go, lanzada el 2016, ya cuenta con más de [20 millones de usuarios alrededor del mundo](https://medium.com/@pedro_ux/pok%C3%A9mon-go-a-case-for-ux-and-psychology-8b6377db573a), con usuarios de distintos rangos de edades, intereses y género. 
 
-Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
-posible para ayudarle a satisfacer sus necesidades.
+Tomando en consideración la amplia población de usuarios, decidimos centrarnos en las siguientes interrogantes para poder definir a nuestros usuarios.
 
-### Estos son datos que te proponemos:
+1. ¿Quiénes son los principales usuarios de producto?
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto, 
-  junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/src/data/pokemon/README.md)
+Nuestro proyecto está dirigido a jugadores frecuentes de la aplicación, sin distinción de género, que estén familiarizados con el lenguaje y dinámica del juego. No es necesario que sean expertos, sino que mantengan un ritmo frecuente de uso de la app. El rango de edades variará entre 14 - 35 años, tomando en consideración una población de nativos digitales. Esto impactará en el diseño e interfaz de nuestro proyecto, ya que nos permitirá saber qué tanta información deseamos poner en la página y cómo debemos ponerla para que logre ser comprendida de forma óptima.
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](/src/data/lol/README.md)
+2. ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-* [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
-  respectivas características mencionadas en la serie de novelas de Harry Potter
-  escrita por la autora británica J.K.Rowling.
-  * [Investigación con jugadores de Harry Potter: Wizards Unite](/src/data/potter/README.md)
+Los usuarios frecuentes necesitan consultar las características de los pokémons para que puedan informarse al momento de elegir capturarlos.
 
+3. ¿Cuándo utilizan o utilizarían el producto?
 
-## 3. Objetivos de aprendizaje
+Utilizarían la página al momento de jugar (antes de las batallas o al esperar que aparezcan pokemons), o antes de decidir salir a buscarlos, para tener una idea más clara de lo que se quiere atrapar. También podrían utilizarla después, cosa de conocer más detalles de sus tipos favoritos. Por ende, es necesario que nuestro proyecto sea `responsive` y funcione en desktop, celulares y tablets.
 
-El objetivo principal de este proyecto es que, entendiendo las necesidades de
-tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
-visualizar y manipular data.
+4. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
-proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
-y de equipo.
+Para contestar esta pregunta, decidimos hacer una encuesta breve en grupos de jugadores frecuentes y jugadores de la app en específico, tales como en [Pokemon Go Chile](https://www.facebook.com/groups/1736009143333785/), [Gamers](https://www.facebook.com/groups/1720626704877043/), y [Estudiantes UC](https://www.facebook.com/groups/297268223677037/), ya que cumplían con los criterios descritos anteriormente (referente a los rangos de edades, que hayan tanto hombres como mujeres en los grupos, con frecuencia de uso de juego y que sean nativos digitales).
 
-### UX
+Ir a [Encuesta](https://survey.app.do/que-necesitas-para-complementar-tu-juego-pokemon/NgucyUxE)
 
-- [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-- [ ] Crear prototipos para obtener _feedback_ e iterar.
-- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+Para hacernos una idea de las prioridades de los usuarios, decidimos proponer 5 opciones con distintas características de los pokémons, y luego les pedimos que las ordenaran de más relevante a menos relevante a la hora de jugar Pokémon GO.
 
-### HTML y CSS
+![Encuesta](src/imagesREADME/ENCUESTA.jpg)
 
-- [ ] Entender y reconocer por qué es importante el HTML semántico.
-- [ ] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona `flexbox` en CSS.
-- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
+Después de un poco más de 24 horas, pudimos obtener **85 respuestas**, las cuales arrojaron los siguientes resultados:
 
-### DOM
+![Resultados](src/imagesREADME/ResultadosEncuesta.jpg)
 
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [ ] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+Como se puede apreciar, la mayoría de los jugadores consideran que **conocer las características del Pokémon** es la opción más importante, para así poder decidir más rápido cuál elegir. Este resultado se convertiría en el enfoque principal de nuestras primera Historia de Usuario.
 
-### Javascript
+### 2. Definiendo nuestras Historia de Usuario
 
-- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [ ] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
-- [ ] Entender el uso de bucles (`for` | `forEach`).
-- [ ] Entender la diferencia entre expression y statements.
-- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
+Para definir cada Historia de Usuario (H.U.), utilizamos 3 parámetros:
 
-### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
+**Yo, (usuario)**, **Quiero** (objetivo del usuario), **Para** (propósito de ese objetivo).
 
-### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
+Con esto, pudimos construir 4 Historias de Usuario basadas en las opciones de la encuesta, siendo la primera H.U. la que contiene la opción más relevante, tal como se muestra en la siguiente tabla.
 
-### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+![tabla UH](src/imagesREADME/TablaHU.jpg)
 
-### Soft skills
-- [ ] **Planificación, organización y manejo del tiempo** Organizarse utilizando historias de usuario, haciendo una estimación general de los tiempos que se necesitarán para la realización del proyecto. Conocer las ceremonias y artefactos ágiles (sprint planning, dailys, retrospectiva, tablero al menos, etc) a pesar de que no se utilicen con regularidad. 
+Una vez establecidas las H.U., decidimos establecer los `Criterios de Aceptación` y la `Definición de Terminado`.
 
-- [ ] **Trabajo en equipo** Trabajar con otros de forma colaborativa y en base a un objetivo común, entregando ideas para la construcción del proyecto
+Por temas de tiempo, decidimos enfocarnos en cumplir solamente con nuestra primera H.U., definiendo los criterios en base a los requerimientos de esa historia. 
 
-- [ ] **Autoaprendizaje** Demostrar interés y adquirir nuevos conocimientos autónomamente, estudiando de manera independiente, lo que se traduce, en que cuando es necesario, la estudiante buscará aclarar conceptos y resolver dudas sobre la materia.
+## Planificación 
 
-- [ ] **Presentaciones** Utilizar ciertas estrategias para hablar en público (tono y ritmo de voz adecuado, contacto visual con el público, interacción con medios de presentación), que permitan asegurar un mediano entendimiento de la audiencia.
+Después de obtener nuestros primeros resultados y definir nuestras H.U., decidimos implementar un [Trello](https://trello.com/b/YBYNtDjD/pokemon-go) para poner nuestros objetivos del proyecto, en base al tiempo y recursos, además del contenido a estudiar y de integrar la planificación semanal. 
 
-- [ ] **Adaptabilidad** Afrontar los cambios inesperados o nuevos desafíos con una actitud positiva, aunque no necesariamente se logre accionar o adaptarse de la mejor manera a los diferentes contextos.
+![trelloImg](src/imagesREADME/trelloImg.jpg)
 
-- [ ] **Solución de problemas** Trabajar en la búsqueda y en la elaboración de soluciones alternativas a problemas de mediana complejidad.
+Acá incluímos la H.U. con sus respectivos criterios. Pincha [acá](https://trello.com/c/Inntb4If) para ir directamente a la pestaña del Trello **Historia 1** de "HISTORIAS DE USUARIO".
 
-- [ ] **Responsabilidad** Demostrar actitud de compromiso, reflejandolo en la entrega de trabajo a tiempo, llegando a la hora acordada y/o avisando cuando no se pueda asistir.
+![trelloUH](src/imagesREADME/Cra.jpg)
 
-- [ ] **Dar y recibir feedback** Escuchar los comentarios y críticas de los demás de manera respetuosa, y/o comunicar a los demás las opiniones de forma constructiva.
+Además, decidimos incorporar nuestros objetivos de UX para planificar nuestros test de usabilidad e iteraciones. Esto nos ayudará a dar el puntapié inicial para comenzar nuestro proyecto.
 
-- [ ] **Comunicación eficaz** Comunicar ideas a los demás cuando es necesario, aunque no siempre se fomenten de manera proactiva estas instancias de comunicación.
+![trelloUX](src/imagesREADME/CAux.jpg)
 
-## 4. Consideraciones generales
+# Definición de terminado
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (`commit`/`push`) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo: toma como referencia 3 semanas.
+Para poder dar por terminada la primera historia de usuario, debemos haber cumplido los siguientes criterios:
 
-## 5. Criterios de aceptación mínimos del proyecto
+-	El código cumple con la guía de estilos acordada.
+-	El código se encuentra en el repositorio.
+-	El código tiene y pasa los test necesarios.
+-	El código ha recibido feedback de pares, coaches.
+-	El código ha sido hecho en pair-programming o se le ha hecho code review.
+-	La historia de usuario implementada ha sido probada con al menos 3 usuarios, y se han incorporado las mejoras identificadas en los testeos de usabilidad.
 
-Los criterios que deberás considerar para saber si has completado este proyecto
-son:
+## Diseño de la Interfaz de Usuario
 
-### Definición del producto
+### Prototipos de baja fidelidad
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+1. Wireframe en Sketch
 
-### Historias de usuario
+En primera instancia, decidimos hacer el sketch utilizando papel y lápiz para saber cómo nos gustaría que se viera nuestra web. Decidimos hacer un esquema sencillo y fácil de usar, tomando en consideración que tenemos tiempo limitado para realizar nuestras H.U.
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de entendimiento de tus usuarios.
+![sketch](src/imagesREADME/sketchAll.jpg)
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+Para este primer prototipo, quisimos implementar un HOME o pantalla de inicio que mostrara el logo, una barra de navegación superior y 3 imágenes que perimitieran mostrar los datos más relevantes para el usuario. Al presionar la imagen principal, pasaría a la segunda pantalla donde se desplegarían todos los pokémons. Además, al hacer click en un pokémon se abriría una ventana modal que mostrara sus características.
 
-En la medida de lo posible, termina de construir una historia de usuario antes
-de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de
-Aceptación).
+2. Mockup en Balsamiq
 
-### Diseño de la Interfaz de Usuario
+Con el diseño del sketch en mente, decidimos utilizar la herramienta [Balsamic](https://balsamiq.com/) para digitalizar nuestro wireframe y diseñar un mockup, que permitiera ver la navegabilidad de la página al interactuar con los distintos elementos.
 
-#### Prototipo de baja fidelidad
+Ver [Prototipo en Balsamic](https://balsamiq.cloud/sijdwql/p9szr7c/rCFBA)
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+![balsamiqPages](src/imagesREADME/balsamiqPage.jpg)
 
-#### Prototipo de alta fidelidad
+Como se puede observar, este diseño se mantuvo bastante fiel al original, con los filtros correspondientes y las imágenes principales.
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
-[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
-correspondiente a cada set de datos que elijas.
+### Prototipo de Alta Fidelidad
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+Para desarrollar nuestro mockup de alta fidelidad, utilizamos [Figma](https://www.figma.com/), para así crear un diseño que fuese fiel a nuestro proyecto final.
 
-#### Testeos de usabilidad
+Tomando en consideración nuestros prototipos anteriores, decidimos mantener la estructura original, pero esta vez, comenzamos a integrar detalles que ayudaran a cumplir nuestros criterios de aceptación. Considerando que nuestros usuarios son jugadores frecuentes, incorporamos los colores y formas originales de los elementos de Pokémon Go, como el hecho de que se usan bastantes colores en gradiente, y que los botones tienden a ser redondos en vez de la forma cuadrada por default. De esta manera, estamos empleando un lenguaje de la app que el usuario frecuente ya conoce, lo que genera una sensación de familiaridad y confianza en nuestra web, aumentando así las posibilidades de que prefiera utilizarla nuevamente a futuro.
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Para cumplir con el objetivo de ser una web responsive, creamos este prototipo para versión desktop y móvil.
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+Ver [Prototipo de Alta Fidelidad para Desktop en Figma](https://www.figma.com/file/1F7lrcPurj03bRTzu2MEVB/POKEMON-GO)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-No tienes tiempo ilimitado para trabajar, así es que deberás priorizar.
+![figma](src/imagesREADME/FigmaHOME.jpg)
 
-Como mínimo, tu implementación debe:
+Ver [Prototipo de Alta Fidelidad para Móvil en Figma](https://www.figma.com/proto/1F7lrcPurj03bRTzu2MEVB/POKEMON-GO?node-id=238%3A2&scaling=scale-down)
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita. <!--filtrar y ordenar la data.-->
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
+![figma](src/imagesREADME/FigmaM.jpg)
 
-### Pruebas unitarias
+Una vez listo, decidimos comenzar a exportar los códigos desde Figma a nuestro CSS, para mantenernos fiel a nuestro prototipo de alta fidelidad.
 
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones que tenga tu código. <!--encargadas de  _procesar_, _filtrar_ y _ordenar_ la data, así como _calcular_
-estadísticas.-->
+Este diseño representa el *ideal* de nuestra solución a todas nuestras H.U., por lo que se dejaron enlaces, botones e imágenes sin funcionalidad, ya que priorizamos el cumplir con los criterios de la primera H.U.
 
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
+### Fundamentos de Visual Design
 
-## 6. Parte adicional-opcional (extensión)
+Respecto a los fundamentos de Visual Design, nuestro prototipo cumple con cada uno de los 4 criterios CRAP:
 
-Si **terminaste** con todo lo anterior y te queda tiempo, intenta explorar y
-completar parte o todo de lo siguiente:
+1. **Contraste**: nos aseguramos de que el color de la fuente de letra fuera legible, utilizando blanco en fondos oscuros, e implementando hover para resaltar el texto. Además, nos preocupamos de no elegir colores demasiado fuertes que saturen al usuario, prefiriendo los azules, verdes y naranjas (aludiendo a la naturaleza, lo que tiene relación directa con el objetivo de "salir a buscar" de la app).
 
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
+2. **Repetición**: mantuvimos uniformidad en colores, utilizando una paleta basada en la paleta original del juego.Los botones se mantuvieron redondos y nos enfocamos en centrar los elementos para darle mayor simetría a la página.
 
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
+3. **Alineación**: mantuvimos un márgen constante entre cada tarjeta, y nos preocupamos de que los botones de la barra de navegación superior estuviesen centrados y no se salieran del márgen creado por las imágenes de abajo.
 
-* 100% Coverage de pruebas unitarias.
+4. **Proximidad**: para este prototipo, pusimos los botones de navegación juntos, así como los selectores de filtro para que fuesen fáciles de encontrar y usar. Como el usuario tiende a leer la pantalla desde arriba hacia abajo, nos preocupamos de poner los filtros en una misma fila superior, y mantener un margen entre esos selectores y el despliegue de las tarjetitas. A su vez, las tarjetas también mantienen un margen y centrado constante, para evitar dispersión y desorden de la data.
 
-## 7. Consideraciones técnicas
+Con nuestro prototipo listo, nos pusimos a codear para implementar la interfaz de usuario. Sin embargo, por cosas de tiempo, no pudimos probar nuestros prototipos en instancias formales, pero si pudimos hacerlo con nuestra página lista, tal como se detallará en el siguiente apartado.
 
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
+## Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-No se debe utilizar la _pseudo-variable_ `this`.
+Para comenzar nuestro diseño e implementación de usuario final, tuvimos en cuenta los siguientes criterios:
 
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
+- Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
 
-```text
-.
-├── pokemon
-|  ├── README.md
-├── potter
-|  ├── README.md
-├── lol
-|  ├── README.md
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  └── lol.json
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  └── pokemon.json
-|  |  ├── potter
-|  |  |  ├── potter.js
-|  |  |  └── potter.json
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-├── test
-|  ├── data.spec.js
-├── README.md
-└── package.json
+Logramos mostrar la data en tarjetas (cards), creando divs para cada pokemon con el HTML dinámico.
 
-directory: 9 file: 16
-```
+- Permitir al usuario interactuar para obtener la infomación que necesita.
 
-### `src/index.html`
+Logramos integrar tres tipos de selectores con funciones para filtrar por tipo, orden alfabético (A-Z y Z-A) y orden por número de pokémon (ascendente y descendente).
 
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué script se usará y unir todo lo que hemos hecho.
+- Ser responsive, es decir, debe visualizarse sin problemas desde distintos tamaños de pantallas: móviles, tablets y desktops.
 
-Encontrarás 1 etiqueta inicial, la cual si deseas puedes borrar y empezar de cero:
+Además de integrarlo a tamaño desktop, logramos implementar el responsive con `media query` para tamaños de celulares y dispositivos con un ancho mínimo de 320px y un máximo de 767px.
 
-```
- <div id="root"></div>
-```
+- Que la interfaz siga los fundamentos de visual design.
 
-### `src/main.js`
+Acorde a lo dicho anteriormente, nuestro proyecto sigue con alta fidelidad los 4 criterios CRAP de visual design. Si bien quedaron algunos detalles por arreglar, el diseño es armónico y agradable, además de sencillo de utilizar, tal como lo habíamos establecido en nuestro prototipo de Figma.
 
-Acá escribirás todo el código que tenga que ver con la interacción del DOM
-(seleccionar, actualizar y manipular elementos del DOM y eventos). Es decir,
-en este archivo deberás invocar a tus funciones exportadas en el boilerplate,
-según sea necesario para realizar operaciones como creación de nodos,
-registro de manejadores de eventos (_event listeners_ o _event handlers_), ....
+Una vez terminado el diseño y la interfaz, nuestra pantalla de inicio y se veía así.
 
-En este archivo encontrarás una serie de _sentencias_ `import`
-_comentadas_. Para _cargar_ las diferentes fuentes de datos tendrás que
-_descomentar_ estas _sentencias_. Cada una de estas sentencias importará un
-objeto, el cual ya se encuentra exportado en el boilerplate. Este objeto
-contiene la data correspondiente a esa fuente de datos.
+![DGBefore](src/imagesREADME/DGAnterior.jpg)
 
-Por ejemplo, si "descomentamos" la siguiente línea:
+Y la segunda pantalla:
 
-```
- /**
- import LoL from './data/lol/lol.js'
- */
-```
+![DGSecond](src/imagesREADME/DGSecond.jpg)
 
-La línea quedaría así:
+Es importante destacar que nuestra pantalla de inicio no estaba terminada en esta etapa, ya que faltaban las otras imágenes, pero para poder cumplir con nuestra H.U. principal, priorizamos la imagen con el botón que lleva a la segunda página, donde se despliegan los pokémon. La pantalla de inicio es la que más cambios tuvo durante todo el proceso de testeo con usuarios.
 
-```
-import LoL from './data/lol/lol.js'
-```
+## Testeos de Usabilidad
 
-Y ahora tendríamos el objeto `LoL` disponible en nuestro archivo (`src/main.js`).
+Con nuestra web lista, decidimos emprender nuestros primeros Test de Usabilidad. Para esto, contactamos jugadores que cumplieran con nuestros requisitos de usuario, y los invitamos a testear acorde a una pauta establecida.
 
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
+1. Saludar al usuario y agradecer su colaboración con nuestro proyecto. Es importante recalcar que no buscamos testear su conocimiento, sino que buscamos recopilar todo el feedback posible que nos pueda entregar para mejorar nuestra web.
 
-### `src/data.js`
+2. Nombrar nuestra web y dar una breve definición: "Nuestra web se llama Datamon GO y busca entregar información acerca de pokemons de la región de Kanto".
 
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
+3. Pedir que nos entregue las primeras impresiones del proyecto, dejando que el usuario hable en voz alta, evitando las interrupciones.
 
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
+4. Posicionar al usuario con un objetivo: "¿Cómo buscarías los pokemons tipo planta?". Aquí debemos observar y anotar el proceso de búsqueda, por lo que es importante abstenernos de dar demasiadas directrices.
 
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* Y así sucesivamente, según tu proyecto en particular.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
+5. Pedir sugerencias y comentarnos las cosas que añadiría o que le gustaría ver en la página, así como también aquello que quitaría.
 
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán exportadas en el boilerplate, para
-después ser usadas desde el archivo `src/main.js`, al cargar la página, y cada vez
-que el usuario interactúe (click, filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo importaremos como un objeto al archivo main.js,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1)
-   un `remote` hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-***
-
-### Contenido de referencia
-
-#### Diseño de experiencia de usuario (User Experience Design)
-
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
-
-#### Desarrollo Front-end
-
-* [Unidad de testing en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/scl-2019-10-bc-core-scl012/courses/javascript/11-testing/00-opening)
-* [Unidad de arreglos en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/scl-2019-10-bc-core-scl012/courses/javascript/04-arrays/01-arrays)
-* [Unidad de objetos en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/scl-2019-10-bc-core-scl012/courses/javascript/05-objects/01-objects)
-* [Unidad de funciones en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/scl-2019-10-bc-core-scl012/courses/javascript/03-functions/00-opening)
-* [Unidad de DOM en curso de Browser JavaScript en LMS.](https://lms.laboratoria.la/cohorts/scl-2019-10-bc-core-scl012/courses/browser/02-dom/00-opening)
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atomicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-
-#### Herramientas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-***
+6. Agradecer su tiempo y su colaboración, recalcando que su feedback nos será muy útil para mejorar nuestra web.
+
+Para la asignación de roles, nos fuimos turnando. A ambas nos tocó tanto hablar con el usuario como anotar los aspectos importantes del testeo.
+
+
+### Video de Testeo 1 
+
+https://www.loom.com/share/68cb8fce19ce45fd9a659939c913091e
+
+### Video de Testeo 2
+
+https://www.loom.com/share/7a89b83b556943e98c2ce97b3b601077
+
+### Video de Testeo 3
+
+https://www.loom.com/share/6e4218346ea449b39b9603aa614e52e4
+
+### Video de Testeo 4
+
+https://www.loom.com/share/ae545a56411449be983a28dc5bd25f0e
+
+## Feedback de Test de Usabilidad
+
+Los aspectos más comentados fueron:
+
+1. Aspectos positivos
+
+- La mayoría de los comentarios fueron positivos respecto al diseño y los colores, los encontraron agradables y armónicos, lo que evitaba el cansancio visual.
+
+- Destacaron el diseño minimalista, mostrando sólo la información pertinente y no bombardeando con demasiados elementos que podrían saturar la visión.
+
+- Destacaron el hecho de que implementamos un buscador, y de que se mantenga en las distintas páginas.
+
+- Les gustó el diseño de las cartas, destacando la interacción del hover y que el tamaño de la letra era legible.
+
+2. Aspectos a mejorar
+
+- El botón de la imagen principal del Home pasaba inadvertido. 
+
+Solución: cambiar el color de este botón y ponerlo amarillo para crear uniformidad (acá estamos cumpliendo uno de los criterios CRAP).
+
+- El botón TIPO del Home fue bastante utilizado, sin embargo, como no alcanzamos a implementar esa función, muchos usuarios nos dijeron que sería muy útil que desplegara los tipos, quizás en forma de botones y con ilustraciones, como aparece en la app.
+
+Solución: Habilitar ese botón a futuro, ya que está contemplado para otra H.U.
+
+- A muchos usuarios les gustaría ver las evoluciones, y ojalá verlos de forma única en vez de en grupo.
+
+Solución: como proyección a futuro, se podría implementar una ventana modal para ver al pokémon en más detalle y con más características. Además, podemos implementar una función que entregue las evoluciones de cada pokémon, ya que está previsto para otra H.U. que no logramos completar en este sprint.
+
+- No se entiende a qué se refiere el botón que dice POKÉMON GO de la barra de navegación.
+
+Solución: ser más específicas y poner un texto que diga "ir a aplicación", "descargar Pokémon Go" o "Jugar". Sin embargo, como son usuarios frecuentes, ya cuentan con la app, por lo que sería más útil linkearlo a foros o páginas de jugadores donde se compartan tips del juego.
+
+## Conclusiones finales
+
+- Logramos cumplir con casi todos nuestros criterios para la definición de terminado, lo que nos tiene bastante satisfechas considerando el tiempo y el desafío que implicó el proyecto.
+
+- Si bien no se dieron instancias formales de iterar nuestro prototipo, fuimos modificando el diseño en base a nuestros usuarios, enfocándonos en solucionar sus principales necesidades como jugadores, y preocupándonos de que le página les fuese agradable y familiar.
+
+- Después de los testeos, integramos los cambios a nuestra página final, principalmente mejorando aquellos elementos que corresponden a nuestra primera H.U., pero mantuvimos aquellos elementos que queremos hacer funcionar a futuro para cumplir con el resto de nuestras H.U.
+
+## Desarrolladoras
+
+- Nataly Cuevas
+- Katherine Muñoz
+
+

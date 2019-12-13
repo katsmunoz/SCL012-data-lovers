@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +5,7 @@
 
 body {
   background-image: url(images/fondoTrama.jpg);
+  background-repeat: repeat;
   font-family: 'Lato', sans-serif;
 }
   
@@ -13,20 +13,18 @@ body {
     display: flex;
     justify-content:center;
     flex-direction:row;
-    width: 1330px;
-    height: 110px;
     padding: 10px 16px;
     background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
+    background-size: auto;
     mix-blend-mode: normal;
   }
-   
+
   #pokeLogo {
-    display:flex;
     width: 430px;
-    height: 115;
+    height: 115px;
   }
 
-  .content {
+  /* .content {
     padding: 16px;
   }
   
@@ -38,20 +36,21 @@ body {
   
   .sticky + .content {
     padding-top: 102px;
-  }
+  } */
 
-  #upperBar {
+  .barraNav {
     display: flex;
-    justify-content: center;
-    
+    justify-content: left; 
+    margin-left: 65px;
   }
 
   .pokeButtonNav {
     width: 125px;
     height: 47px;
-    border: 0px;
+    border: 10px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+    margin-right: 10px;
 
     font-family: 'Lato', sans-serif;
     font-size: 18px;
@@ -64,50 +63,94 @@ body {
     transition: .5s;
     cursor: pointer;
   }
+  
+
+  #pokeSearch {
+    display: flex; 
+    margin-top: -47px;
+    margin-left: 1200px;
+  }
 
   .pokeSearchStyle {
     width: 240px;
-    height: 26px;
-    padding: 6px;
+    height: 38px;
     background: #FFFFFF;
     border: 2px solid #FFCC03;
     border-radius: 60px;
     font-size: 18px;
   }
 
-  #pokemonImageUp {
+  .pokeImageStyle {
     display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-left: 230px;
-    border: 0px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-  }
-
-  .pokeImageFirstStyle {
+    flex-wrap: wrap;
     border: 2px solid  rgba(72, 255, 231, 0.609);
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
   }
 
-  .pokeElegir {     
-    width: 906px;
-    height: 47px;
+  #pokePic1 {
+    justify-content: center;
+    width: 1400px;
+    height: 230px;
+    margin-top: 40px; 
+    margin-left: 40px; 
+    margin-right: 40px;
+  }
+
+  #pokePic2 {
+    justify-content: left;
+    width: 700px;
+    height: 193px;
+    margin-top: 40px; 
+    margin-left: 40px; 
+    margin-right: 40px;
+  }
+
+  #pokePic3 {
+    justify-content: right;
+    align-items:center;
+    width: 700px;
+    height: 193px;
+    margin-top: -264px; 
+    margin-left: 760px;  
+  }
+
+  .pokeElegir {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 67px;
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     text-align: center;
     color: #FFFFFF;
-    background: linear-gradient(270.58deg, rgba(141, 253, 123, 0.792) 0.02%, rgba(2, 227, 200, 0.774) 99.99%);
+    background: #FFCC03;
     border: 0px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
   }
+  
   .pokeElegir:hover {
     background:   #1E3565;
     transition: .5s;
     cursor: pointer;
   }
+
+  #elegirPokeBtn {
+    width: 1404px;
+    margin-left: 40px; 
+  }
+
+  #elegirPokeBtn2 { 
+    width: 704px;
+    margin-left: 40px; 
+  }
+
+  #elegirPokeBtn3 { 
+    width: 704px;
+    margin-left: 760px; 
+  }
+
 
 #homePage {
   display: block;
@@ -118,27 +161,27 @@ body {
 }
 
   #contentOfCards {
-    display:flex;
-    flex-wrap: wrap; 
-    margin:20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 20px;
     margin-top: 40px;
   }
-
+   
   .pokeCardsStyle {
     width: 180px;
     height: 180px;
- 
+
     background: #FFFFFF;
     border: 3px solid #F49321;
     border-radius: 30px;
-    margin: 10px; 
+    margin: 10px;
   }
-
+    
   .pokeCardsStyle:hover {
     background: rgb(243, 200, 151);
     transition: .5s;
-    
-
+  
     -ms-transform: scale(1.06); /* IE 9 */
     -webkit-transform: scale(1.06); /* Safari 3-8 */
     transform: scale(1.06); 
@@ -148,15 +191,15 @@ body {
   .pokeCardsPic { 
     width: 100px;
     height: 100px; 
-  }
-
+  } 
+  
   .pokeCardsName {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
- 
+
     color: #F49321;
   }
 
@@ -167,9 +210,9 @@ body {
     background: #F49321;
     border: 1px solid #F49321;
   }
-
+  
   .pokeCardsNum {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 11px;
@@ -178,14 +221,11 @@ body {
     color: #F49321;
   } 
 
-
   select {
     width: 278px;
     height: 38px;
-    margin:20px;
-    margin-top: 30px;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin: 10px;
+    margin-top: 0px; 
     cursor: pointer;
   
     background: #FFCC03;
@@ -193,7 +233,7 @@ body {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -205,7 +245,7 @@ body {
   option {
     width: 221px;
     margin-top: 100px;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -214,17 +254,50 @@ body {
     color: #FFFFFF;
   }
 
-  
-  
-  
+  #pokeFooter {
+    display: flex;
+    justify-content:center;
+    flex-direction:row;
+    width: 1920px;
+    height: 100px;
+    margin-top: 40px;
+    background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
+    
+  }
 
 
 
-
-
-
-
-
-
-
-  /*div: borde, alto, ancho
+  /* RESPONSIVE para Móvil */
+  @media (min-width: 320px) and (max-width: 767px) {
+    #pokeHeader {
+      width: 342px;
+      height: 110px;
+      padding: 10px 16px;
+  }
+    #pokeLogo {
+      display: flex;
+      justify-content: center;
+      width: 300px;
+    }
+    .pokeCardsName {
+      font-size: 10px;
+    }
+    .pokeCardsLine {
+    width: 45px;
+    margin: auto;
+   }
+    .pokeCardsStyle {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #F49321;
+    border-radius: 15px;
+  }
+ .pokeCardsPic {
+    width: 50px;
+    height: 50px;
+  }
+  .barraNav2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
