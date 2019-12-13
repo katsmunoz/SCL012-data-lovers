@@ -54,7 +54,7 @@ Para hacernos una idea de las prioridades de los usuarios, decidimos proponer 5 
 
 Después de un poco más de 24 horas, pudimos obtener **85 respuestas**, las cuales arrojaron los siguientes resultados:
 
-![Resultados](src/imagesREADME/ResultadosEncuesta.jpg)
+![Resultados](src/imagesREADME/resultadosEncuesta.jpg)
 
 Como se puede apreciar, la mayoría de los jugadores consideran que **conocer las características del Pokémon** es la opción más importante, para así poder decidir más rápido cuál elegir. Este resultado se convertiría en el enfoque principal de nuestras primera Historia de Usuario.
 
@@ -78,9 +78,11 @@ Después de obtener nuestros primeros resultados y definir nuestras H.U., decidi
 
 ![trelloImg](src/imagesREADME/trelloImg.jpg)
 
-Acá incluímos la H.U. con sus respectivos criterios. Pincha [acá](https://trello.com/c/Inntb4If) para ir directamente a la pestaña del Trello **Historia 1** de "HISTORIAS DE USUARIO".
+Para organizarnos, en el Trello incluímos nuestra H.U. principal con sus respectivos criterios. 
 
-![trelloUH](src/imagesREADME/Cra.jpg)
+Pincha [acá](https://trello.com/c/Inntb4If) para ir directamente a la pestaña del Trello **Historia 1** de "HISTORIAS DE USUARIO".
+
+![trelloUH](src/imagesREADME/CrA.jpg)
 
 Además, decidimos incorporar nuestros objetivos de UX para planificar nuestros test de usabilidad e iteraciones. Esto nos ayudará a dar el puntapié inicial para comenzar nuestro proyecto.
 
@@ -175,7 +177,7 @@ Acorde a lo dicho anteriormente, nuestro proyecto sigue con alta fidelidad los 4
 
 Una vez terminado el diseño y la interfaz, nuestra pantalla de inicio y se veía así.
 
-![DGBefore](src/imagesREADME/DGAnterior.jpg)
+![DGBefore](src/imagesREADME/DGanterior.jpg)
 
 Y la segunda pantalla:
 
@@ -218,11 +220,15 @@ https://www.loom.com/share/6e4218346ea449b39b9603aa614e52e4
 
 https://www.loom.com/share/ae545a56411449be983a28dc5bd25f0e
 
+### Video de Testeo 5
+
+https://www.loom.com/share/7bc72da70d4f436db63c1a3b76997a8d
+
 ## Feedback de Test de Usabilidad
 
 Los aspectos más comentados fueron:
 
-1. Aspectos positivos
+**1. Aspectos positivos**
 
 - La mayoría de los comentarios fueron positivos respecto al diseño y los colores, los encontraron agradables y armónicos, lo que evitaba el cansancio visual.
 
@@ -232,7 +238,7 @@ Los aspectos más comentados fueron:
 
 - Les gustó el diseño de las cartas, destacando la interacción del hover y que el tamaño de la letra era legible.
 
-2. Aspectos a mejorar
+**2. Aspectos a mejorar**
 
 - El botón de la imagen principal del Home pasaba inadvertido. 
 

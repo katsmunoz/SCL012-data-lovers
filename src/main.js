@@ -1,7 +1,5 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
-//import * as modulo from './data.js';
-
 // Importar funcion POKEMON BY TYPE de data
 import { pokemonByType } from './data.js';
 
