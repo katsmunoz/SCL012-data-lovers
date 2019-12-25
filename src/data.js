@@ -1,6 +1,5 @@
 // Filtrar por TIPOS
-export const pokemonByType = (POKEMON, types) => {
-  return POKEMON.filter(pokeTypes => pokeTypes.type.includes(types));
+export const pokemonByType = (POKEMON, types) => {return POKEMON.filter(pokeTypes => pokeTypes.type.includes(types));
 };
 
 // Ordenar por NOMBRE y NÚMERO
@@ -11,14 +10,11 @@ export const pokemonByName = (POKEMON, sortBy, sortOrder) => {
 
   if (sortOrder === 'aToZ') {
     return compare;
-  }
-  if (sortOrder === 'zToA') {
+  } if (sortOrder === 'zToA') {
     return compare.reverse();
-  }
-  if (sortOrder === 'menorMayor') {
+  } if (sortOrder === 'menorMayor') {
     return compare;
-  }
-  if (sortOrder === 'mayorMenor') {
+  } if (sortOrder === 'mayorMenor') {
     return compare.reverse();
   }
-}
+};

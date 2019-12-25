@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -20,29 +19,32 @@
   </div>
 
   <div id="homePage">
-    <div id="upperBar" class="barraSup">
+    <div id="pokeBar" class="barraSup">
       <nav class="barraNav">
         <button id="pokeHomeBtn" class="pokeButtonNav">HOME</button>
         <button id="pokeTypesBtn" class="pokeButtonNav">Tipo</button>
         <button id="pokeWeakBtn" class="pokeButtonNav">Debilidades</button>
-        <button id="pokeAboutBtn" class="pokeButtonNav">Pokémon Go</button>
+        <button id="pokeAboutBtn" class="pokeButtonNav">Foros</button>
       </nav>
-      <input id="pokeSearch" class="pokeSearchStyle" type="text" placeholder="Buscar...">
+      <input id="pokeSearchFirst" class="pokeSearchStyle" type="text" placeholder="Buscar...">
     </div>
 
     <div id="pokemonImageUp" class="pokeImageDiv">
-      <img id=pokePic1 class="pokeImageStyle" src="images/allPokemons2.png" alt="allPokemons">
+      <img id="pokePic1" class="pokeImageStyle" src="images/allPokemons2.png" alt="allPokemons">
       <button id="elegirPokeBtn" class="pokeElegir">¡Descubre acá los pokémon de Kanto!</button>
-      <img id=pokePic2 class="pokeImageStyle" src="images/evolucion.png" alt="evolucion">
+      <img id="pokePic2" class="pokeImageStyle" src="images/evolucion.png" alt="evolucion">
       <button id="elegirPokeBtn2" class="pokeElegir">¡Conoce las evoluciones!</button>
-      <img id=pokePic3 class="pokeImageStyle" src="images/ranking.png" alt="ranking">
+      <img id="pokePic3" class="pokeImageStyle" src="images/ranking.png" alt="ranking">
     </div>
-    <button id="elegirPokeBtn3" class="pokeElegir">Ranking Pokémon</button>
+    <button id="elegirPokeBtn3" class="pokeElegir">Ranking pokémon</button>
   </div>
 
-  <div id="secondPage">
-    <nav id="upperBar" class="barraNav">
+  <section id="secondPage">
+    <nav id="upperBar" class="pokeButtonNav">
       <button id="pokeHomeBtn2" class="pokeButtonNav">HOME</button>
+      <input id="pokeSearchSecond" class="pokeSearchStyle" type="text" placeholder="Buscar...">
+    </nav>
+      <div id="selectsByFilters">
       <select id="select1">
         <option value="">Filtrar por tipo</option>
         <option value="Water">Agua</option>
@@ -51,6 +53,7 @@
         <option value="Electric">Eléctrico</option>
         <option value="Ghost">Fantasma</option>
         <option value="Fire">Fuego</option>
+        
         <option value="Ice">Hielo</option>
         <option value="Normal">Normal</option>
         <option value="Fighting">Lucha</option>
@@ -73,13 +76,11 @@
         <option value="mayorMenor">De mayor a menor</option>
         <option value="menorMayor">De menor a mayor</option>
       </select>
-    </nav>
-    <input id="pokeSearch" class="pokeSearchStyle" type="text" placeholder="Buscar...">
+    </div>
     <section id="contentOfCards"></section>
-  </div>
+  </section>
 
-  <footer>
-    <div id="pokeFooter" class="footer"></div></footer>
+  <footer><div id="pokeFooter" class="footer"></div></footer>
 
 
 

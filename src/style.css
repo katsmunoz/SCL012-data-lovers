@@ -24,24 +24,16 @@ body {
     height: 115px;
   }
 
-  /* .content {
-    padding: 16px;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 102px;
-  } */
-
   .barraNav {
     display: flex;
-    justify-content: left; 
+    justify-content: left;
     margin-left: 65px;
+  }
+
+  #selectsByFilters {
+    display: flex;
+    justify-content: center;
+
   }
 
   .pokeButtonNav {
@@ -63,21 +55,19 @@ body {
     transition: .5s;
     cursor: pointer;
   }
-  
-
-  #pokeSearch {
-    display: flex; 
-    margin-top: -47px;
-    margin-left: 1200px;
-  }
 
   .pokeSearchStyle {
+    display: flex; 
+    margin-top: -47px;
+    margin-left: 1040px;
+
     width: 240px;
     height: 38px;
     background: #FFFFFF;
     border: 2px solid #FFCC03;
     border-radius: 60px;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
   }
 
   .pokeImageStyle {
@@ -87,32 +77,39 @@ body {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
   }
+  
+   .pokeImageStyle:hover {
+    background:   rgba(72, 255, 231, 0.609);
+    opacity: 60%;
+    transition: .5s;
+    cursor: pointer;
+  } 
 
   #pokePic1 {
     justify-content: center;
-    width: 1400px;
+    width: 1220px;
     height: 230px;
     margin-top: 40px; 
-    margin-left: 40px; 
+    margin-left: 63px; 
     margin-right: 40px;
   }
 
   #pokePic2 {
     justify-content: left;
-    width: 700px;
+    width: 600px;
     height: 193px;
     margin-top: 40px; 
-    margin-left: 40px; 
+    margin-left: 63px; 
     margin-right: 40px;
   }
 
   #pokePic3 {
     justify-content: right;
     align-items:center;
-    width: 700px;
+    width: 600px;
     height: 193px;
     margin-top: -264px; 
-    margin-left: 760px;  
+    margin-left: 680px;  
   }
 
   .pokeElegir {    
@@ -121,7 +118,7 @@ body {
     justify-content: center;
     height: 67px;
     font-family: 'Lato', sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     text-align: center;
     color: #FFFFFF;
     background: #FFCC03;
@@ -137,28 +134,28 @@ body {
   }
 
   #elegirPokeBtn {
-    width: 1404px;
-    margin-left: 40px; 
+    width: 1224px;
+    margin-left: 63px; 
   }
 
   #elegirPokeBtn2 { 
-    width: 704px;
-    margin-left: 40px; 
+    width: 604px;
+    margin-left: 63px; 
   }
 
   #elegirPokeBtn3 { 
-    width: 704px;
-    margin-left: 760px; 
+    width: 604px;
+    margin-left: 680px; 
   }
 
 
-#homePage {
-  display: block;
-}
+  #homePage {
+    display: block;
+  }
 
-#secondPage {
-  display: none;
-}
+  #secondPage {
+    display: none;
+  }
 
   #contentOfCards {
     display: flex;
@@ -222,10 +219,12 @@ body {
   } 
 
   select {
+    display: flex;
     width: 278px;
     height: 38px;
     margin: 10px;
-    margin-top: 0px; 
+    margin-top: 10px;
+    margin-left: 20px; 
     cursor: pointer;
   
     background: #FFCC03;
@@ -235,7 +234,7 @@ body {
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 20px;
     line-height: 24px;
 
@@ -243,6 +242,7 @@ body {
   }
 
   option {
+    display: flex;
     width: 221px;
     margin-top: 100px;
     font-family: 'Lato', sans-serif;
@@ -258,46 +258,143 @@ body {
     display: flex;
     justify-content:center;
     flex-direction:row;
-    width: 1920px;
-    height: 100px;
+    height: 80px;
     margin-top: 40px;
     background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
-    
+    background-size: auto;
+    mix-blend-mode: normal;
   }
 
+/* RESPONSIVE para Móvil */
 
-
-  /* RESPONSIVE para Móvil */
   @media (min-width: 320px) and (max-width: 767px) {
     #pokeHeader {
-      width: 342px;
-      height: 110px;
-      padding: 10px 16px;
-  }
+      width: 343px; 
+      height: 70px;
+    }
+
+    .barraNav {
+      display: flex;
+      justify-content: left;
+      margin-left: 8px;
+    }
+
+    #upperBar {
+      display: flex;
+      justify-content: left;
+      margin-left: 8px;
+    }
+
     #pokeLogo {
       display: flex;
       justify-content: center;
       width: 300px;
+      height: 80px;
     }
+      
+    .pokeButtonNav {
+      width: 125px;
+      height: 30px;
+      border: 10px;
+      margin-right: 10px;
+      font-size: 13px;    
+    }
+
+    #pokePic1 {
+      justify-content: center;
+      width: 354px;
+      height: 80px;
+      margin-top: 20px;
+      margin-left: 7px;
+    }
+
+    .pokeImageStyle {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    #elegirPokeBtn {
+      width: 356px;
+      margin-left: 7px;
+    }
+
+    .pokeElegir {
+      height: 30px;
+      font-size: 16px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  
+    #pokePic2 {
+      justify-content: center;
+      width: 354px;
+      height: 80px;
+      margin-top: 15px;
+      margin-left: 7px;
+    }
+
+    #pokePic3 {
+      justify-content: center;
+      width: 354px;
+      height: 80px;
+      margin-top: 15px;
+      margin-left: 7px;
+    }
+        
+    #elegirPokeBtn3 {
+      width: 356px;
+      margin-left: 7px;
+    }
+      
+    #elegirPokeBtn2 {
+      width: 356px;
+      margin-left: 7px;
+    }
+
     .pokeCardsName {
       font-size: 10px;
     }
+
     .pokeCardsLine {
-    width: 45px;
-    margin: auto;
-   }
+      width: 45px;
+      margin: auto;
+    }
+
     .pokeCardsStyle {
-    width: 90px;
-    height: 90px;
-    border: 2px solid #F49321;
-    border-radius: 15px;
-  }
- .pokeCardsPic {
+      width: 90px;
+      height: 98px;
+      border: 2px solid #F49321;
+      border-radius: 15px;
+    }
+
+    .pokeCardsPic {
     width: 50px;
     height: 50px;
-  }
-  .barraNav2 {
-    display: flex;
-    flex-direction: column;
+    }
+
+    .barraNav2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #pokeFooter {
+      height: 60px;
+      margin-top: 30px;
+    }
+
+    .pokeSearchStyle {
+      display: flex;
+      height: 30px;
+      margin-top: 20px;
+      margin-left: 70px;
+    }
+
+    #contentOfCards {
+      margin-top: 20px;
+    }
+
+    select {
+      font-size: 16px;
+    }
   }
 }
