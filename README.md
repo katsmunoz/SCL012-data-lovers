@@ -4,7 +4,7 @@
 
 **Datamon Go** es una página web donde usuarios frecuentes de la app [Pokémon Go](https://www.pokemongo.com/en-us/) puedan conocer las características de todos los pokémons de la región de Kanto. Por medio de 3 filtros, pueden conocer a los pokémon por tipo, ordenarlos alfabéticamente y por número.
 
-Enlace deploy de [Datamon Go](https://natigrottes.github.io/SCL012-data-lovers/src/index.html)
+Enlace deploy de [Datamon Go](https://katsmunoz.github.io/SCL012-data-lovers/src/index.html)
 
 ![datamonGo](src/imagesREADME/DGFinal.jpg)
 
