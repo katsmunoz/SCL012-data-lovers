@@ -20,8 +20,13 @@ body {
   }
 
   #pokeLogo {
-    width: 430px;
-    height: 115px;
+    width: 280px;
+  }
+
+  .pokemonImageUp {
+    display: flex;
+    flex-direction: column;
+
   }
 
   .barraNav {
@@ -54,6 +59,19 @@ body {
     background:   #1E3565;
     transition: .5s;
     cursor: pointer;
+  }
+
+  #pokeHomeBtn2 {
+    width: 125px;
+    height: 47px;
+    border: 10px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-right: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #FFCC03;
   }
 
   .pokeSearchStyle {
@@ -255,9 +273,7 @@ body {
   }
 
   #pokeFooter {
-    display: flex;
-    justify-content:center;
-    flex-direction:row;
+    width: 100%;
     height: 80px;
     margin-top: 40px;
     background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
@@ -269,27 +285,22 @@ body {
 
   @media (min-width: 320px) and (max-width: 767px) {
     #pokeHeader {
-      width: 343px; 
-      height: 70px;
+      display: flex;
+      justify-content: center; 
     }
 
     .barraNav {
       display: flex;
       justify-content: left;
       margin-left: 8px;
+      margin-right: -3px;
+      margin-right: 15px;
     }
 
     #upperBar {
       display: flex;
-      justify-content: left;
-      margin-left: 8px;
-    }
-
-    #pokeLogo {
-      display: flex;
-      justify-content: center;
-      width: 300px;
-      height: 80px;
+      flex-wrap: wrap;
+      flex-direction: column;
     }
       
     .pokeButtonNav {
@@ -383,10 +394,7 @@ body {
     }
 
     .pokeSearchStyle {
-      display: flex;
-      height: 30px;
-      margin-top: 20px;
-      margin-left: 70px;
+      display: none;
     }
 
     #contentOfCards {
@@ -396,5 +404,9 @@ body {
     select {
       font-size: 16px;
     }
+
+    #selectsByFilters {
+      display: flex;
+      flex-direction: column;
   }
-}
+  }
