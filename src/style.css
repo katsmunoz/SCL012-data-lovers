@@ -20,7 +20,8 @@ body {
   }
 
   #pokeLogo {
-    width: 280px;
+    width: 430px;
+    height: 115px;
   }
 
   .pokemonImageUp {
@@ -273,7 +274,9 @@ body {
   }
 
   #pokeFooter {
-    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction:row;
     height: 80px;
     margin-top: 40px;
     background: linear-gradient(90deg, rgba(72, 255, 231, 0.609) 0%, rgba(83, 223, 158, 0.719) 100%);
@@ -285,8 +288,7 @@ body {
 
   @media (min-width: 320px) and (max-width: 767px) {
     #pokeHeader {
-      display: flex;
-      justify-content: center; 
+      width: 100%; 
     }
 
     .barraNav {
@@ -301,6 +303,13 @@ body {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+    }
+
+    #pokeLogo {
+      display: flex;
+      justify-content: center;
+      width: 300px;
+      height: 80px;
     }
       
     .pokeButtonNav {
